@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactDetailsComponent implements OnInit {
 
+  countryList = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola'	, 'Antigua', 'Argentina'];
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
