@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CountriesService } from '../Countries.service';
 
 @Component({
   selector: 'app-contact-details',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactDetailsComponent implements OnInit {
 
-  countryList = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola'	, 'Antigua', 'Argentina'];
-  constructor() { }
+  countryList;
+  constructor(private myService: CountriesService) { }
 
   ngOnInit() {
+    this.countryList = this.myService.getCountryList();
   }
 
 
